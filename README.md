@@ -1,4 +1,5 @@
 # Petsgram ⚛️
 
-Advanced React course
+Advanced React course.
+
 Practing React with Platzi.
