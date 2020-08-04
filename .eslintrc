@@ -14,11 +14,19 @@
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "react/prop-types": "off",
+    "strict": "off",
+    "indent": ["error", 2],
+    "semi": "error",
+    "quotes": [2, "double", { "avoidEscape": true }],
+    "jsx-quotes": ["error", "prefer-double"],
+    "eol-last": "error"
   },
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
-  "ignorePatterns": ["/api/**", "/node_modules/**"]
+  "ignorePatterns": ["/node_modules/**", "/api/**", "/dist/**"]
 }

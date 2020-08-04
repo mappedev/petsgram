@@ -1,7 +1,18 @@
-import React from 'react'
+import React from "react";
 
-export default function App() {
+import { Logo } from "./components/Logo";
+import { ListOfCategories } from "./components/ListOfCategories";
+import { ListOfPhotoCards } from "./components/ListOfPhotoCards";
+
+import { GlobalStyles } from "./styles/GlobalStyles";
+
+export const App = () => {
   return (
-    <h1>Hola estás en Petsgram!</h1>
-  )
-}
+    <React.Fragment>
+      <GlobalStyles />
+      <Logo />
+      <ListOfCategories />
+      <ListOfPhotoCards />
+    </React.Fragment>
+  );
+};
