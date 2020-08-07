@@ -1,0 +1,9 @@
+# Folders
+dist
+api
+.vercel
+
+# Files
+!.babelrc.js
+!.prettierrc.js
+

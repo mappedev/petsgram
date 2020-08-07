@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { fadeIn } from "../../styles/animations";
+import { fadeIn } from '../../styles/animations/fadeIn';
 
 export const Article = styled.article`
   background-color: white;

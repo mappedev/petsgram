@@ -1,0 +1,8 @@
+# Folders
+dist
+api
+.vercel
+
+# Files
+/*.json
+/*.md
