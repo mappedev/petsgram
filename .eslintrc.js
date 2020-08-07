@@ -16,8 +16,7 @@ module.exports = {
   rules: {
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
-    'import/no-default-export': 'error',
-    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': ['error', { extensions: ['.js'] }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
   // Component Logo (SVG) disable: no spreading.

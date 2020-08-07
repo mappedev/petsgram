@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-import { Category } from '../Category';
-import { SkeletonCategory } from '../SkeletonCategory';
+import Category from '../Category';
+import SkeletonCategory from '../SkeletonCategory';
 
 import { List, Item } from './styles';
 
 // Hooks:
-const useCategoriesData = () => {
+function useCategoriesData() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -25,9 +25,9 @@ const useCategoriesData = () => {
   }, []);
 
   return { categories, loading };
-};
+}
 
-const useShowFixed = () => {
+function useShowFixed() {
   const [showFixed, setShowFixed] = useState(false);
 
   useEffect(() => {
@@ -40,10 +40,10 @@ const useShowFixed = () => {
   }, [showFixed]);
 
   return showFixed;
-};
+}
 
 // Component:
-export const ListOfCategories = () => {
+export default function ListOfCategories() {
   const { categories, loading } = useCategoriesData();
   const showFixed = useShowFixed();
 
@@ -72,4 +72,4 @@ export const ListOfCategories = () => {
       {showFixed && renderList(true)}
     </>
   );
-};
+}

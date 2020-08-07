@@ -6,15 +6,10 @@ module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src', 'index.js'),
   },
-  resolve: {
-    alias: {
-      '@': 'src',
-    },
-  },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader',
       },
