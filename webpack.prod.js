@@ -8,5 +8,5 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].[contenthash].bundle.js',
   },
-  mode: 'production',
+  mode: 'development',
 });

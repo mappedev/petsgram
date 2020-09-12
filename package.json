@@ -6,7 +6,10 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --open --config ./webpack.dev.js",
-    "lint": "eslint ./"
+    "serve:build": "webpack --mode development",
+    "serve:dev": "npm run build && npx serve dist -s",
+    "lint": "eslint ./",
+    "test": "cypress open"
   },
   "keywords": [
     "javascript",
@@ -16,9 +19,15 @@
   "author": "@mappedev",
   "license": "MIT",
   "dependencies": {
+    "@apollo/client": "^3.1.3",
     "@babel/plugin-transform-runtime": "^7.11.0",
+    "@reach/router": "^1.3.4",
+    "graphql": "^15.3.0",
+    "intersection-observer": "^0.11.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
     "styled-components": "^5.1.1"
   },
@@ -29,6 +38,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "cypress": "^5.1.0",
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -44,7 +54,9 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.0.9"
+    "webpack-merge": "^5.0.9",
+    "webpack-pwa-manifest": "^4.2.0",
+    "workbox-webpack-plugin": "^5.1.3"
   },
   "husky": {
     "hooks": {

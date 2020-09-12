@@ -1,12 +1,27 @@
 import React from 'react';
 
-import { SkeletonWrapper, SkeletonImage, SkeletonEmoji } from './styles';
+import {
+  SkeletonWrapper,
+  SkeletonContent,
+  SkeletonImage,
+  SkeletonEmoji,
+} from './styles';
 
-export default function SkeletonCategory() {
+export default function SkeletonCategory({ quantity = 1 }) {
+  const numElements = [];
+
+  for (let i = 0; i < quantity; i++) {
+    numElements.push(i);
+  }
+
   return (
     <SkeletonWrapper>
-      <SkeletonImage />
-      <SkeletonEmoji />
+      {numElements.map((element) => (
+        <SkeletonContent key={element}>
+          <SkeletonImage />
+          <SkeletonEmoji />
+        </SkeletonContent>
+      ))}
     </SkeletonWrapper>
   );
 }

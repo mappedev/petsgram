@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { MdFavorite, MdFavoriteBorder } from 'react-icons/md';
 
 import { fadeIn } from '../../styles/animations/fadeIn';
 
@@ -8,6 +9,7 @@ export const Article = styled.article`
   margin: 25px 0;
   border-radius: 10px;
   padding-bottom: 10px;
+  min-height: 180px;
 `;
 
 export const ImgWrapper = styled.div`
@@ -42,4 +44,12 @@ export const Button = styled.button`
   & svg {
     margin-right: 4px;
   }
+`;
+
+export const LikeIcon = styled(MdFavorite)`
+  ${fadeIn({ time: '0.2s', type: 'ease-in' })}
+`;
+
+export const DislikeIcon = styled(MdFavoriteBorder)`
+  ${fadeIn({ time: '0.2s', type: 'ease-in' })}
 `;

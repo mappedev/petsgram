@@ -1,0 +1,6 @@
+{
+  "baseUrl": "https://petsgram.mappedev.vercel.app/",
+  "chromeWebSecurity": false,
+  "viewportWidth": 500,
+  "viewportHeihgt": 800
+}

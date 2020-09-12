@@ -2,8 +2,10 @@
 dist
 api
 .vercel
+cypress
 
 # Files
 !.babelrc.js
 !.prettierrc.js
-
+/*.json
+/*.md
